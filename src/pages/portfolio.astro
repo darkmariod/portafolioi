@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro'; // Importa el componente Footer
+
+const projects = [
+  {
+    title: "Ecommerce API",
+    link: "/portfolio",
+    imageURL: "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Creating an API from an ecommerce: I used Golang and echo framework, cartero carrier for the api requests, Neovim for the code editing. Among the main features of the api is the integration of paypal, to be consumed with any js library for the frontend, allowing to create an online store."
+  },
+  {
+    title: "Webbit",
+    link: "/portfolio",
+    imageURL: "https://images.unsplash.com/photo-1511044568932-338cba0ad803?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Clone of reddit using Ruby on Rails, in version 7 using the new Turbo features, Hotwire was a project developed for the Ruby on Rails  bootcamp Código Fácilito, it tries to replicate all the main features of Reddit. An extra feature i implemented was the integration of payment gateways like Stripe, PayPal."
+  },
+  {
+    title: "Lawyer",
+    link: "/portfolio",
+    imageURL: "https://images.unsplash.com/photo-1507955987999-df4864ee80d4?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Web system for the control of jurisprudence for a law firm, the technologies used are: Djanto REST Framework for the creation of the API, use Vue in the frontend to create an intuitive interface, accessible to users. The code editor was Vscode, Cartero to check the API requests, Docker to automate the installation of the project dependencies."
+  },
+];
+---
+
+<Layout>
+  <!-- Hero Section -->
+  <Hero href="/" title='Mario Pazmiño' desc='Here are some of my projects, feel free to get in touch.' />
+
+  <!-- Projects Section -->
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        projects.map((project) => (
+          <Card
+            title={project.title}
+            imageURL={project.imageURL}
+            desc={project.desc}
+            href={project.link}
+          />
+        ))
+      }
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <Contact />
+
+  <!-- Footer Section -->
+  <Footer />
+</Layout>
