@@ -1,0 +1,30 @@
+<nav class="sticky top-0 bg-white dark:bg-gray-900 border-b dark:border-gray-800 z-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+            <a href="/" class="text-xl font-bold text-gray-800 dark:text-white">
+                Mario Pazmiño
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Servicios</a>
+                <a href="#tools" class="nav-link">Herramientas</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </div>
+
+            <button class="language-btn">
+                Español
+            </button>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .nav-link {
+        @apply text-gray-600 dark:text-gray-300 hover:text-primary transition-colors;
+    }
+    
+    .language-btn {
+        @apply px-4 py-2 text-sm rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors;
+    }
+</style>
