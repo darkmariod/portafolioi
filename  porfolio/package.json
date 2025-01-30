@@ -8,7 +8,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^5.1.10"
+  "devDependencies": {
+    "@unocss/astro": "^65.4.3",
+    "@unocss/preset-attributify": "^65.4.3",
+    "@unocss/preset-uno": "^65.4.3",
+    "@unocss/reset": "^65.4.3",
+    "astro": "^5.1.10",
+    "unocss": "^65.4.3"
   }
 }
